@@ -20,9 +20,15 @@
 }
 
 
-.item:hover {
+.false .item:hover {
+  background-image: url(icons/x.png);
+  background-position: center;
   background-color: #3E4253;
-  color: #8C8D9A;
+}
+.true .item:hover {
+  background-image: url(icons/o.png);
+  background-position: center;
+  background-color: #3E4253;
 }
 
 span {
@@ -76,6 +82,11 @@ span {
   .item {
     width: 90px;
     height: 90px;
+    text-align: center;
+  }
+  .item:hover {
+     background-color: #79BEC4;
+     color: #3E4253; 
   }
 
   .item i {

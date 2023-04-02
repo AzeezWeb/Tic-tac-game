@@ -7,7 +7,9 @@ function App() {
   const [state, setState] = useState(false)
   const [players, setPlayers] = useState(0)
   
-  let list = elArr.map((item, index) => {
+  const [App, setApp] = useState('App false')
+
+  let list = elArr.map((index) => {
     return <div className='item' key={index} id={index} onClick={add}> </div>
   })
 
@@ -18,6 +20,7 @@ function App() {
       e.target.appendChild(element)
       e.target.classList.add('player1')
       setState(true)
+      setApp( 'App true')
     }
 
     if(state) {
@@ -26,6 +29,7 @@ function App() {
       e.target.appendChild(element)
       e.target.classList.add('player2')
       setState(false)
+      setApp( 'App false ')
       }
   
       
@@ -58,6 +62,7 @@ function App() {
   let Restart = () => {
     setPlayers(0)
     setState(false)
+    setApp('App false')
   }
 
 
@@ -79,7 +84,7 @@ function App() {
  
 
   return (
-    <div className="App">
+    <div className={App}>
       {project()}
     </div>
   );
