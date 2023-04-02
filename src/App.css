@@ -1,38 +1,84 @@
 .App {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  background-color: #79BEC4;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.item:hover {
+  background-color: #3E4253;
+  color: #8C8D9A;
+}
+
+span {
+  display: none;
+}
+
+
+.item i {
+  font-size: 150px;
+}
+
+.player1 {
+  background-color: #DC685B;
+  color: #fff;
+}
+.player2 {
+  background-color: #EEAE4B;
+  color: #fff;
+}
+
+
+.winner {
+  padding-top: 150px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.winner h1 {
+  font-size: 30px;
+  color: #3E4253;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.winner button {
+  color: #f9f9f9;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #212227;
+}
+
+
+@media only screen and (max-width: 578px) {
+  .App {
+    width: 300px;
+    height: 300px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .item {
+    width: 90px;
+    height: 90px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .item i {
+    font-size: 90px;
   }
 }
