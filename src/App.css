@@ -84,12 +84,8 @@ span {
     height: 90px;
     text-align: center;
   }
-  .item:hover {
-     background-color: #79BEC4;
-     color: #3E4253; 
-  }
 
   .item i {
-    font-size: 90px;
+    font-size: 70px;
   }
 }
